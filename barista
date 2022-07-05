@@ -1,0 +1,34 @@
+while True:
+    menu = "Black Coffee, Latte, Espresso, Cappuccino"
+
+    check = []
+    contd = True
+    print("Welcome to Sun dollars! I'm Tony, your very own robot Barista.")
+
+    name = input("What is your name human?").capitalize()
+    print("Hey", name)
+    print('Please take a look at our menu :)')
+    print(str(menu))
+    while contd == True:
+        order = input('What would you like to order?')
+        quantity = int(input('How many would you like?'))
+        for i in range(quantity):
+            if order == "black coffee":
+                price = 6
+            elif order == "espresso":
+                price = 7
+            elif order == "latte":
+                price = 8
+            elif order == "cappuccino":
+                price = 9
+            #check.append(menu[order])
+            total = price * int(quantity)
+            print("Thank you. Your total is: $" + str(total))
+            loopBreak = input("Is that going to be all?")
+        if loopBreak == "Y":
+            contd = True
+        elif loopBreak == "N":
+            contd = False
+
+#total = round(sum(check), 2)
+#print(total + "is your total. Come again soon!")
